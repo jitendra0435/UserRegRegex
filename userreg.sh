@@ -6,8 +6,9 @@
 	emailPattern="^[a-zA-Z]{1,}[0-9]*([._+-]{1,}[a-z]+){0,1}[@][a-zA-Z0-9]+[.][a-z]{2,4}([.][a-z]{2}){0,1}"
 	mobilePattern="^[0-9]{2}[ ]{1}[0-9]{10}$"
 	passwordRule1="^[a-zA-Z]{8,10}$"
-	function fullNameValidation(){
-		
+	passwordRule2="[a-zA-Z]*[A-Z]+[a-zA-Z]*{8,}$"
+
+	function fullNameValidation(){	
 		echo "enter firstName"
 		read firstName
 
@@ -55,7 +56,7 @@
 		echo "enter password"
 		read password
 
-		if [[ $password =~ $passwordRule1 ]]		
+		if [[ $password =~ $passwordRule2 ]]
 			then
 				echo "yes"
 		else
