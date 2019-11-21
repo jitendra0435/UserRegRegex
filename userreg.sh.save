@@ -1,0 +1,15 @@
+		echo"Welcome user Regestration"
+		#!/bin/bash -x
+        echo "enter firstName"
+        read  firstName
+		
+		  firstName="^[A-Z]+{3,}"
+
+        if [[ $firstName =~ $final ]]
+        then
+                echo "yes"
+        else
+                echo "No"
+ 	       fi
+
+
