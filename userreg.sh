@@ -7,6 +7,7 @@
 	mobilePattern="^[0-9]{2}[ ]{1}[0-9]{10}$"
 	passwordRule1="^[a-zA-Z]{8,10}$"
 	passwordRule2="[a-zA-Z]*[A-Z]+[a-zA-Z]*{8,}$"
+	passwordRule3="[a-zA-Z0-9]*[A-Z]+[a-zA-Z0-9]*{8,}$"
 
 	function fullNameValidation(){	
 		echo "enter firstName"
@@ -19,7 +20,7 @@
         	then
                 echo "yes"
         	else
-                echo "No"
+                echo "Inavlid"
  		fi
 	}
 
@@ -56,17 +57,17 @@
 		echo "enter password"
 		read password
 
-		if [[ $password =~ $passwordRule2 ]]
+		if [[ $password =~ $passwordRule3 ]]
 			then
 				echo "yes"
 		else
-				echo "invalid"
+				echo "invalidEmail"
 		fi
 	}
 
 	
 	
-	#fullNameValidation
-	#emailIdValidation
-	#mobileNumberValidation
+	fullNameValidation
+	emailIdValidation
+	mobileNumberValidation
 	passwordValidation
